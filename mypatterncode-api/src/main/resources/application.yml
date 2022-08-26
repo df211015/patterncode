@@ -1,0 +1,4 @@
+server:
+  servlet:
+    context-path: /patterncode
+  port: 8505
