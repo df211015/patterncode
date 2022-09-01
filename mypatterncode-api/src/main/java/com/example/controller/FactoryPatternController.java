@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.example.constants.EShape;
 import com.example.dto.Shape;
 import com.example.factoryPattern.v1.SimpleShapeFactory;
@@ -32,14 +33,14 @@ public class FactoryPatternController {
     }
 
     @GetMapping(value = "/getfactorymethod")
-    public Product getFactoryMethod(){
+    public Product getFactoryMethod() {
         Creator creator = new ConcreteCreator();
         ConcreteProduct1 product = creator.createProduct(ConcreteProduct1.class);
         return product;
     }
 
     @GetMapping(value = "getabstractfactory")
-    public String getAbstractFactory(){
+    public String getAbstractFactory() {
         AbstractCreator creator1 = new Creator1();
         AbstractCreator creator2 = new Creator2();
         AbstractProductA productA = creator1.createProductA();
