@@ -14,5 +14,9 @@ public class App implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("设计模式示例代码多项目启动成功!");
+
+//        String source = "http://img5.taoche.cn/00/de6a63bd-102301vzar.jpg";
+//        String replace = source.replace("/00/", "/39/");
+//        String str = "";
     }
 }

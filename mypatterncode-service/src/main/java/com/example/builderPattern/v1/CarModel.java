@@ -1,18 +1,20 @@
 package com.example.builderPattern.v1;
 
-public class CarModel extends Car {
-    @Override
-    public void start() {
-        System.out.println("启动");
-    }
+import java.util.ArrayList;
+import java.util.List;
 
-    @Override
-    public void alarm() {
-        System.out.println("鸣喇叭");
-    }
+public abstract class CarModel {
+    private List<String> sequence = new ArrayList<>();
 
-    @Override
-    public void stop() {
-        System.out.println("停止");
+    public abstract void start();
+
+    public abstract void stop();
+
+    public abstract void alarm();
+
+    public abstract void engineBoom();
+
+    public void run() {
+        //todo
     }
 }
